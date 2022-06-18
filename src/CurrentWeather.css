@@ -1,0 +1,36 @@
+.CurrentWeather {
+  font-family: "Heebo", sans-serif;
+  text-align: center;
+}
+
+#weather-image-display {
+  width: 100%;
+}
+.imageContainer {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 80px;
+  padding: 20px;
+}
+h2 {
+  font-size: 30px;
+  padding: 20px 0px 20px 0px;
+}
+h3 {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
