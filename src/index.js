@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Search from "./Search";
 import CurrentWeather from "./CurrentWeather";
+import SunWind from "./SunWind";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.css";
 import reportWebVitals from "./reportWebVitals";
@@ -11,6 +12,7 @@ root.render(
   <React.StrictMode>
     <Search />
     <CurrentWeather />
+    <SunWind />
     <Footer />
   </React.StrictMode>
 );

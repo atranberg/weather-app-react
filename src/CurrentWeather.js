@@ -1,6 +1,7 @@
 import React from "react";
 import "./CurrentWeather.css";
 import ScatteredClouds from "./images/scatteredClouds.jpg";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function CurrentWeather() {
   let weatherData = {
