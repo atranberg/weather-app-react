@@ -1,0 +1,21 @@
+.Search .container {
+  padding: 30px 0px 30px 0px;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  font-family: "Heebo", sans-serif;
+}
+
+.Search .row {
+  padding-left: 0px;
+}
+
+#temperature-conversion .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+#temperature-conversion .active:hover {
+  text-decoration: none;
+}
