@@ -1,4 +1,5 @@
-.CurrentWeather {
+.CurrentWeather,
+.SunWind {
   font-family: "Heebo", sans-serif;
   text-align: center;
 }
@@ -22,15 +23,32 @@
   transform: translate(-50%, -50%);
 }
 
-h1 {
+.CurrentWeather h1 {
   font-size: 80px;
   padding: 20px;
 }
-h2 {
+.CurrentWeather h2 {
   font-size: 30px;
   padding: 20px 0px 20px 0px;
 }
-h3 {
+.CurrentWeather h3 {
   font-size: 20px;
   padding-bottom: 30px;
+}
+
+.SunWind {
+  padding: 30px 0px 30px 0px;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.sunriseLabel,
+.sunsetLabel,
+.windSpeedLabel {
+  color: #c24d2c;
+  font-weight: 800;
+}
+.row {
+  padding: 20px;
 }
