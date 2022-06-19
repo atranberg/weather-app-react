@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./CurrentWeather.css";
 
@@ -15,6 +16,7 @@ export default function CurrentWeather(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -55,8 +57,7 @@ export default function CurrentWeather(props) {
                 </span>
               </h3>
               <h4>
-                <span id="date-display">Saturday 28 May 2022</span> |{" "}
-                <span id="time-display">13:45</span>
+                <FormattedDate date={CurrentWeatherData.date} />
               </h4>
             </div>
           </div>
