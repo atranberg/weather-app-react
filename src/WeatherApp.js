@@ -15,9 +15,11 @@ export default function CurrentWeather(props) {
       temperature: response.data.main.temp,
       city: response.data.name,
       wind: response.data.wind.speed,
-      icon: response.data.weather[0].icon,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
     });
   }
 
