@@ -31,6 +31,7 @@ export default function CurrentWeather(props) {
       date: new Date(response.data.dt * 1000),
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
+      timezone: response.data.timezone,
     });
   }
 
