@@ -1,8 +1,16 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
+  let unit = props.unit;
+  let temperature = props.data.temperature;
+
+  if (unit === "metric") {
+    return Math.round(temperature);
+  }
+  if (unit === "imperial") {
+    return Math.round(temperature - 32) * (5 / 9);
+  }
   return (
     <div className="container">
       <div className="CurrentWeather">
@@ -25,7 +33,11 @@ export default function WeatherInfo(props) {
                 id="weather-icon"
               />
             </div>
-            <WeatherTemperature celsius={props.data.temperature} />
+            <div className="temperatureDisplay">
+              <h1>
+                {temperature}°{unit === "metric" ? "C" : "F"}
+              </h1>
+            </div>
             <h3 className="text-capitalize">
               <span id="weather-description-display">
                 {props.data.description}
