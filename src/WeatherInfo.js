@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import Sunrise from "./Sunrise";
+import Sunset from "./Sunset";
 
 export default function WeatherInfo(props) {
   let unit = props.unit;
@@ -49,14 +51,20 @@ export default function WeatherInfo(props) {
           <div className="row">
             <div className="col-3">
               <div className="sunriseLabel">Sunrise</div>
-              <div className="sunriseTime">06:03</div>
+              <Sunrise
+                timestamp={props.data.sunrise}
+                timezone={props.data.timezone}
+              />
             </div>
 
             <div className="col-3">
               <div className="sunset-information">
                 <div className="sunsetLabel">Sunset</div>
                 <div className="sunsetTime">
-                  <span id="sunsetTime">22:13</span>
+                  <Sunset
+                    timestamp={props.data.sunset}
+                    timezone={props.data.timezone}
+                  />
                 </div>
               </div>
             </div>
@@ -119,7 +127,7 @@ export default function WeatherInfo(props) {
           <div className="row">
             <div className="col-3">
               <div className="sunriseLabel">Sunrise</div>
-              <div className="sunriseTime">06:03</div>
+              <Sunrise timestamp={props.data.sunrise} />
             </div>
 
             <div className="col-3">
