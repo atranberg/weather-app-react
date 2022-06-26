@@ -8,6 +8,17 @@ export default function CurrentWeather(props) {
     ready: false,
   });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("metric");
+
+  function setMetric(event) {
+    event.preventDefault();
+    setUnit("metric");
+  }
+
+  function setImperial(event) {
+    event.preventDefault();
+    setUnit("imperial");
+  }
 
   function handleResponse(response) {
     setCurrentWeatherData({
@@ -72,11 +83,16 @@ export default function CurrentWeather(props) {
                 </div>
                 <div className="col-sm-2" id="temperature-conversion">
                   <span className="units">
-                    <a href="/" id="celsius-link" className="active">
+                    <a
+                      href="/"
+                      id="celsius-link"
+                      className="active"
+                      onClick={setMetric}
+                    >
                       °C
                     </a>{" "}
                     |{" "}
-                    <a href="/" id="fahrenheit-link">
+                    <a href="/" id="fahrenheit-link" onClick={setImperial}>
                       °F
                     </a>
                   </span>
@@ -85,7 +101,7 @@ export default function CurrentWeather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={CurrentWeatherData} />
+        <WeatherInfo data={CurrentWeatherData} unit={unit} />
       </div>
     );
   } else {
