@@ -1,5 +1,6 @@
 .CurrentWeather,
-.SunWind {
+.SunWind,
+.WeatherForecast {
   font-family: "Heebo", sans-serif;
   text-align: center;
 }
@@ -40,7 +41,8 @@
   padding: 12px 15px 12px 15px;
 }
 
-.SunWind {
+.SunWind,
+.WeatherForecast {
   padding: 30px 0px 30px 0px;
   display: block;
   margin: 0 auto;
@@ -49,7 +51,8 @@
 
 .sunriseLabel,
 .sunsetLabel,
-.windSpeedLabel {
+.windSpeedLabel,
+.forecastDay {
   color: #c24d2c;
   font-weight: 800;
 }
