@@ -21,11 +21,15 @@ export default function WeatherForecastDay(props) {
   function icon() {
     let forecastIcon = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
     return (
-      <img
-        src={forecastIcon}
-        alt={props.data.weather[0].description}
-        id="weather-icon"
-      />
+      <div className="forecastIcon">
+        <img
+          src={forecastIcon}
+          alt={props.data.weather[0].description}
+          id="weather-icon"
+          width={50}
+          height={50}
+        />
+      </div>
     );
   }
 
