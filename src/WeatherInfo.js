@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
 import WeatherImage from "./WeatherImage";
+import scatteredClouds from "./images/scatteredClouds.jpg";
 
 export default function WeatherInfo(props) {
   let unit = props.unit;
@@ -13,7 +14,7 @@ export default function WeatherInfo(props) {
       <div className="container">
         <div className="CurrentWeather">
           <div className="imageContainer">
-            <WeatherImage weatherDescription={props.data.weather[0].main} />
+            <WeatherImage weatherDescription={props.data.shortDescription} />
             <div className="centered">
               <h2>
                 <strong>
@@ -84,7 +85,7 @@ export default function WeatherInfo(props) {
       <div className="container">
         <div className="CurrentWeather">
           <div className="imageContainer">
-            <WeatherImage weatherDescription={props.data.weather[0].main} />
+            <WeatherImage weatherDescription={props.data.shortDescription} />
             <div className="centered">
               <h2>
                 <strong>
