@@ -127,15 +127,19 @@ export default function WeatherInfo(props) {
           <div className="row">
             <div className="col-3">
               <div className="sunriseLabel">Sunrise</div>
-              <Sunrise timestamp={props.data.sunrise} />
+              <Sunrise
+                timestamp={props.data.sunrise}
+                timezone={props.data.timezone}
+              />
             </div>
 
             <div className="col-3">
               <div className="sunset-information">
                 <div className="sunsetLabel">Sunset</div>
-                <div className="sunsetTime">
-                  <span id="sunsetTime">22:13</span>
-                </div>
+                <Sunset
+                  timestamp={props.data.sunset}
+                  timezone={props.data.timezone}
+                />
               </div>
             </div>
 
