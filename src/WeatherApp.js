@@ -59,7 +59,7 @@ export default function CurrentWeather(props) {
           <div className="Search">
             <div className="container">
               <div className="row">
-                <div className="col-sm-6 form-floating mb-3">
+                <div className="col-sm-8 form-floating mb-3">
                   <input
                     className="form-control"
                     type="search"
@@ -74,14 +74,6 @@ export default function CurrentWeather(props) {
                     value="Search"
                     className="btn btn-outline-secondary btn-lg"
                     id="search-button"
-                  />
-                </div>
-                <div class="col-sm-2">
-                  <input
-                    type="button"
-                    value="Current location"
-                    className="btn btn-outline-secondary btn-sm"
-                    id="current-location-button"
                   />
                 </div>
                 <div className="col-sm-2" id="temperature-conversion">
