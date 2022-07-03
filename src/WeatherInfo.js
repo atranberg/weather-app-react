@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
+import WeatherImage from "./WeatherImage";
 
 export default function WeatherInfo(props) {
   let unit = props.unit;
@@ -12,11 +13,7 @@ export default function WeatherInfo(props) {
       <div className="container">
         <div className="CurrentWeather">
           <div className="imageContainer">
-            <img
-              src="https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
-              alt="overcast"
-              id="weather-image-display"
-            />
+            <WeatherImage weatherDescription={props.data.weather[0].main} />
             <div className="centered">
               <h2>
                 <strong>
@@ -87,11 +84,7 @@ export default function WeatherInfo(props) {
       <div className="container">
         <div className="CurrentWeather">
           <div className="imageContainer">
-            <img
-              src="https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
-              alt="overcast"
-              id="weather-image-display"
-            />
+            <WeatherImage weatherDescription={props.data.weather[0].main} />
             <div className="centered">
               <h2>
                 <strong>

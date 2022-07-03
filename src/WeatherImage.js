@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function WeatherImage(props) {
-  const weatherDescription = props.data.weather[0].main;
+  let description = props.weatherDescription;
 
-  if (weatherDescription.includes("Clouds")) {
+  if (description.includes("Clouds")) {
     return (
       <img
         src=".images/scatteredClouds.png"
@@ -11,11 +11,11 @@ export default function WeatherImage(props) {
         id="weather-image-display"
       />
     );
-  } else if (weatherDescription.includes("Clear")) {
+  } else if (description.includes("Clear")) {
     return (
       <img src=".images/clearSky.png" alt="clear" id="weather-image-display" />
     );
-  } else if (weatherDescription.includes("Drizzle")) {
+  } else if (description.includes("Drizzle")) {
     return (
       <img
         src=".images/showerRain.png"
@@ -23,9 +23,9 @@ export default function WeatherImage(props) {
         id="weather-image-display"
       />
     );
-  } else if (weatherDescription.includes("Rain")) {
+  } else if (description.includes("Rain")) {
     return <img src=".images/rain.png" alt="rain" id="weather-image-display" />;
-  } else if (weatherDescription.includes("Thunderstorm")) {
+  } else if (description.includes("Thunderstorm")) {
     return (
       <img
         src=".images/thunderstorm.png"
@@ -33,7 +33,7 @@ export default function WeatherImage(props) {
         id="weather-image-display"
       />
     );
-  } else if (weatherDescription.includes("Snow")) {
+  } else if (description.includes("Snow")) {
     return <img src=".images/snow.png" alt="snow" id="weather-image-display" />;
   } else {
     return <img src=".images/mist.png" alt="mist" id="weather-image-display" />;
