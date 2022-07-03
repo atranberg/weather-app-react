@@ -3,7 +3,6 @@ import FormattedDate from "./FormattedDate";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
 import WeatherImage from "./WeatherImage";
-import scatteredClouds from "./images/scatteredClouds.jpg";
 
 export default function WeatherInfo(props) {
   let unit = props.unit;
