@@ -20,24 +20,17 @@ export default function WeatherForecast(props) {
       <div>
         <div className="WeatherForecast">
           <div className="row">
-            <div className="col-2">
-              <WeatherForecastDay data={forecast[1]} />
-            </div>
-            <div className="col-2">
-              <WeatherForecastDay data={forecast[2]} />
-            </div>
-            <div className="col-2">
-              <WeatherForecastDay data={forecast[3]} />
-            </div>
-            <div className="col-2">
-              <WeatherForecastDay data={forecast[4]} />
-            </div>
-            <div className="col-2">
-              <WeatherForecastDay data={forecast[5]} />
-            </div>
-            <div className="col-2">
-              <WeatherForecastDay data={forecast[6]} />
-            </div>
+            {forecast.map(function (dailyForecast, index) {
+              if (index < 6) {
+                return (
+                  <div className="col-2" key={index}>
+                    <WeatherForecastDay data={dailyForecast} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
         </div>
       </div>
